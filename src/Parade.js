@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AnimalEmoji from './AnimalEmoji';
 
-export default function AnimalParade() {
+export default function Parade() {
   const [animals, setAnimals] = useState(['bear', 'tiger', 'alligator']);
 
   function handleAddBear() {
