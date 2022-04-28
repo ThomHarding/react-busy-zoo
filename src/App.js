@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
+import OpenSign from './OpenSign';
 import Parade from './Parade';
 
 function App() {
   const [isOpen, setIsOpen] = useState('false');
   const [unicornSize, setUnicornSize] = useState(10);
   const [lionSize, setLionSize] = useState(10);
-  const [animals, setAnimals] = useState('wolf', 'elephant', 'snail');
+  const [animals, setAnimals] = useState(['wolf', 'elephant', 'snail']);
 
   const ATTACK_VALUE = 1;
 
@@ -45,8 +46,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="fight">
-          <div style={{ width: `${unicornSize * 10}px` }} className="monster">
-            <img src="unicorn.png" width={20} />
+          <div className="monster">
+            <img src="unicorn.png" width={`${unicornSize * 10}px`} height={`${unicornSize * 10}px`} />
             <div className='buttons'>
               <button onClick={handleUnicornIncrease}>
               Grow unicorn
@@ -56,8 +57,8 @@ function App() {
               </button>
             </div>
           </div>
-          <div style={{ width: `${lionSize * 10}px` }} className="monster">
-            <img src="lion.png" width={20} />
+          <div className="monster">
+            <img src="lion.png" width={`${lionSize * 10}px`} height={`${lionSize * 10}px`} />
             <div className="buttons">
               <button onClick={handleLionIncrease}>
               Grow lion
@@ -77,9 +78,9 @@ function App() {
         </div>
         <div className='animal-parade'>
           <Parade animals={animals} />
-          <button onClick={handleAddWolf}>wolf</button>
+          <button onClick={handleAddWolf}>Wolf</button>
           <button onClick={handleAddElephant}>Elephant</button>
-          <button onClick={handleAddSnail}>snail</button>
+          <button onClick={handleAddSnail}>Snail</button>
         </div>
       </header>
     </div>
