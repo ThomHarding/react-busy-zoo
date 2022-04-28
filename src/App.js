@@ -19,6 +19,20 @@ function handleUnicornAttack() {
   setLionSize(lionSize - ATTACK_VALUE);
 }
 
+function handleAddGiraffe() {
+  traffic.push('giraffe');
+  setTraffic([...traffic]);
+}
+
+function handleAddElephant() {
+  traffic.push('elephant');
+  setTraffic([...traffic]);
+}
+
+function handleAddDonkey() {
+  traffic.push('donkey');
+  setTraffic([...traffic]);
+}
 
 function App() {
   const [isOpen, setIsOpen] = useState('false');
@@ -51,6 +65,19 @@ function App() {
             </button>
           </div>
         </div>
+      </div>
+      <div className='open-sign'> 
+        <OpenSign isOpen={isOpen} />
+        <div className="open-buttons">
+          <button onClick={() => setIsOpen(true)}>Open</button>
+          <button onClick={() => setIsOpen(false)}>Close</button>
+        </div>
+      </div>
+      <div className='animal-parade'>
+        <Parade animals={animals} />
+        <button onClick={handleAddGiraffe}>Giraffe</button>
+        <button onClick={handleAddElephant}>Elephant</button>
+        <button onClick={handleAddDonkey}>Donkey</button>
       </div>
       </header>
     </div>
