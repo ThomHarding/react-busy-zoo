@@ -69,6 +69,7 @@ function App() {
             </div>
           </div>
         </div>
+        <hr />
         <div className='open-sign'> 
           <OpenSign isOpen={isOpen} />
           <div className="open-buttons">
@@ -76,6 +77,7 @@ function App() {
             <button onClick={() => setIsOpen(false)}>Close</button>
           </div>
         </div>
+        <hr />
         <div className='animal-parade'>
           <Parade animals={animals} />
           <button onClick={handleAddWolf}>Wolf</button>
