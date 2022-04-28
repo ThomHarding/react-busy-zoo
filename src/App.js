@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Parade from './Parade';
 
 function App() {
   const [isOpen, setIsOpen] = useState('false');
