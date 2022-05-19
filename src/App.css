@@ -37,6 +37,11 @@
   }
 }
 
+.chartContainer {
+  /* width: 90%; */
+  height: 500px;
+}
+
 .fight {
   display: flex;
   flex-direction: row;
