@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import OpenSign from './OpenSign';
 import Parade from './Parade';
+import CustomButton from './CustomButton';
 
 function App() {
   const [isOpen, setIsOpen] = useState('false');
@@ -49,23 +50,23 @@ function App() {
           <div className="monster unicorn" >
             <img src="unicorn.png" width={`${unicornSize * 10}px`} height={`${unicornSize * 10}px`} />
             <div className='buttons'>
-              <button onClick={handleUnicornIncrease}>
+              <CustomButton onClick={handleUnicornIncrease}>
               Grow unicorn
-              </button>
-              <button onClick={handleUnicornAttack}>
+              </CustomButton>
+              <CustomButton onClick={handleUnicornAttack}>
               Attack lion
-              </button>
+              </CustomButton>
             </div>
           </div>
           <div className="monster lion">
             <img src="lion.png" width={`${lionSize * 10}px`} height={`${lionSize * 10}px`} />
             <div className="buttons">
-              <button onClick={handleLionIncrease}>
+              <CustomButton onClick={handleLionIncrease}>
               Grow lion
-              </button>
-              <button onClick={handleLionAttack}>
+              </CustomButton>
+              <CustomButton onClick={handleLionAttack}>
               Attack unicorn
-              </button>
+              </CustomButton>
             </div>
           </div>
         </div>
@@ -73,16 +74,16 @@ function App() {
         <div className='open-sign'> 
           <OpenSign isOpen={isOpen} />
           <div className="open-buttons">
-            <button onClick={() => setIsOpen(true)}>Open the zoo</button>
-            <button onClick={() => setIsOpen(false)}>Close it</button>
+            <CustomButton onClick={() => setIsOpen(true)}>Open the zoo</CustomButton>
+            <CustomButton onClick={() => setIsOpen(false)}>Close it</CustomButton>
           </div>
         </div>
         <hr />
         <div className='animal-parade'>
           <Parade animals={animals} />
-          <button onClick={handleAddWolf}>Wolf</button>
-          <button onClick={handleAddElephant}>Elephant</button>
-          <button onClick={handleAddSnail}>Snail</button>
+          <CustomButton onClick={handleAddWolf}>Wolf</CustomButton>
+          <CustomButton onClick={handleAddElephant}>Elephant</CustomButton>
+          <CustomButton onClick={handleAddSnail}>Snail</CustomButton>
         </div>
       </header>
     </div>
