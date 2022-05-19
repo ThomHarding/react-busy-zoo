@@ -46,7 +46,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="fight">
-          <div className="monster">
+          <div className="monster unicorn" >
             <img src="unicorn.png" width={`${unicornSize * 10}px`} height={`${unicornSize * 10}px`} />
             <div className='buttons'>
               <button onClick={handleUnicornIncrease}>
@@ -57,7 +57,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="monster">
+          <div className="monster lion">
             <img src="lion.png" width={`${lionSize * 10}px`} height={`${lionSize * 10}px`} />
             <div className="buttons">
               <button onClick={handleLionIncrease}>
@@ -73,8 +73,8 @@ function App() {
         <div className='open-sign'> 
           <OpenSign isOpen={isOpen} />
           <div className="open-buttons">
-            <button onClick={() => setIsOpen(true)}>Open</button>
-            <button onClick={() => setIsOpen(false)}>Close</button>
+            <button onClick={() => setIsOpen(true)}>Open the zoo</button>
+            <button onClick={() => setIsOpen(false)}>Close it</button>
           </div>
         </div>
         <hr />
